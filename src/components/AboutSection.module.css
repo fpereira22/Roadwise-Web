@@ -1,0 +1,313 @@
+.section {
+    padding: 120px 0;
+    background: var(--rw-gray-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent);
+}
+
+/* Overlay de imagen con efecto de rayos sutiles */
+.section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-image: url('/network-overlay.jpg'); */
+    background-image: url('/bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.06;
+    filter: grayscale(100%) contrast(1.2);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Content wrapper - por encima del overlay */
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Section Header */
+.sectionTag {
+    display: inline-block;
+    background: rgba(255, 107, 53, 0.1);
+    color: var(--rw-orange);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--rw-dark);
+    margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+    font-size: 1.1rem;
+    color: var(--rw-gray-medium);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Cards */
+.card {
+    background: var(--rw-white);
+    border-radius: 24px;
+    padding: 2.5rem;
+    height: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    border: 2px solid var(--rw-orange);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.cardDark {
+    background: var(--rw-gradient-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cardIcon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--rw-gradient-primary);
+    border-radius: 16px;
+    color: var(--rw-white);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.25);
+}
+
+.cardIconLight {
+    background: rgba(255, 107, 53, 0.15);
+    color: var(--rw-orange);
+    box-shadow: none;
+}
+
+.iconSvg {
+    width: 28px;
+    height: 28px;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--rw-dark);
+    margin: 0;
+}
+
+.cardTitleLight {
+    color: var(--rw-white);
+}
+
+.cardDescription {
+    font-size: 1rem;
+    color: var(--rw-gray-dark);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.cardDescriptionLight {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Points List */
+.pointsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.point {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--rw-gray-light);
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.point:hover {
+    background: var(--rw-gray);
+    transform: translateX(5px);
+}
+
+.pointLight {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.pointLight:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.pointIcon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--rw-white);
+    border-radius: 10px;
+    color: var(--rw-orange);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    box-shadow: var(--rw-shadow-sm);
+}
+
+.pointIconLight {
+    background: rgba(255, 107, 53, 0.2);
+    color: var(--rw-orange-light);
+    box-shadow: none;
+}
+
+.pointContent {
+    flex: 1;
+}
+
+.pointTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--rw-dark);
+    margin-bottom: 0.3rem;
+}
+
+.pointTitleLight {
+    color: var(--rw-white);
+}
+
+.pointDescription {
+    font-size: 0.9rem;
+    color: var(--rw-gray-medium);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.pointDescriptionLight {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Card Decoration */
+.cardDecoration {
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Technology Tags */
+.techLabel {
+    font-size: 0.9rem;
+    color: var(--rw-gray-medium);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.techTags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.techTag {
+    background: var(--rw-white);
+    color: var(--rw-dark);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--rw-gray);
+    transition: all 0.3s ease;
+}
+
+.techTag:hover {
+    border-color: var(--rw-orange);
+    color: var(--rw-orange);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .point {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pointIcon {
+        margin: 0 auto;
+    }
+
+    .techTags {
+        gap: 0.5rem;
+    }
+
+    .techTag {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}

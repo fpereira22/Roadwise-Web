@@ -1,0 +1,251 @@
+.footer {
+    background: var(--rw-gradient-dark);
+    color: var(--rw-white);
+    position: relative;
+}
+
+/* Main Footer */
+.footerMain {
+    padding: 80px 0 60px;
+    position: relative;
+}
+
+.footerMain::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.5), transparent);
+}
+
+/* Brand Section */
+.brandSection {
+    padding-right: 2rem;
+}
+
+.footerLogo {
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.brandDescription {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.tagline {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(255, 107, 53, 0.15);
+    border-left: 3px solid var(--rw-orange);
+    color: var(--rw-orange-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Footer Titles */
+.footerTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--rw-white);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.footerTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--rw-orange);
+    border-radius: 2px;
+}
+
+/* Links Section */
+.linksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linksList li {
+    margin-bottom: 0.75rem;
+}
+
+.footerLink {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footerLink:hover {
+    color: var(--rw-orange);
+    transform: translateX(5px);
+}
+
+.externalIcon {
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+/* Contact Section */
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.contactIcon {
+    color: var(--rw-orange);
+    font-size: 1rem;
+}
+
+.contactLink {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.contactLink:hover {
+    color: var(--rw-orange);
+}
+
+/* Social Links */
+.socialWrapper {
+    margin-top: 1rem;
+}
+
+.socialLabel {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.75rem;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 12px;
+}
+
+.socialLink {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.socialLink:hover {
+    background: var(--rw-orange);
+    border-color: var(--rw-orange);
+    color: var(--rw-white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Footer Bottom */
+.footerBottom {
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.credits {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    text-align: right;
+}
+
+.creditsHighlight {
+    color: var(--rw-orange);
+    font-weight: 600;
+}
+
+/* Scroll to Top Button */
+.scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--rw-gradient-primary);
+    border: none;
+    border-radius: 50%;
+    color: var(--rw-white);
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0.9;
+}
+
+.scrollToTop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.45);
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .footerMain {
+        padding: 60px 0 40px;
+    }
+
+    .brandSection {
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footerMain {
+        padding: 50px 0 30px;
+    }
+
+    .footerTitle {
+        margin-top: 1.5rem;
+    }
+
+    .copyright,
+    .credits {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .scrollToTop {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}

@@ -1,0 +1,161 @@
+.navbar {
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 12px 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.scrolled .logo {
+    height: 38px;
+}
+
+.toggler {
+    border: none;
+    padding: 8px;
+    position: relative;
+    width: 40px;
+    height: 35px;
+    background: transparent !important;
+}
+
+.toggler:focus {
+    box-shadow: none;
+}
+
+.togglerIcon {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--rw-orange);
+    transition: all 0.3s ease;
+}
+
+.togglerIcon::before,
+.togglerIcon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: var(--rw-orange);
+    transition: all 0.3s ease;
+}
+
+.togglerIcon::before {
+    top: -8px;
+}
+
+.togglerIcon::after {
+    top: 8px;
+}
+
+.navLink {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--rw-white) !important;
+    padding: 10px 20px !important;
+    margin: 0 4px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--rw-orange);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navLink:hover::after {
+    width: 60%;
+}
+
+.navLink:hover {
+    color: var(--rw-orange) !important;
+}
+
+.ctaButton {
+    background: var(--rw-gradient-primary) !important;
+    color: var(--rw-white) !important;
+    padding: 10px 24px !important;
+    border-radius: 25px !important;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4);
+}
+
+.ctaButton::after {
+    display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: rgba(26, 26, 46, 0.98) !important;
+        backdrop-filter: blur(20px);
+        padding: 15px 0;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .navLink {
+        text-align: center;
+        padding: 12px 20px !important;
+        margin: 5px 0;
+    }
+
+    .navLink::after {
+        display: none;
+    }
+
+    .navLink:hover {
+        background: rgba(255, 107, 53, 0.1);
+    }
+
+    .ctaButton {
+        margin: 15px auto 10px;
+        display: inline-block;
+        text-align: center;
+        width: auto;
+    }
+
+    :global(.navbar-collapse) {
+        padding: 20px 0;
+    }
+}

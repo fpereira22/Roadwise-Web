@@ -1,0 +1,586 @@
+.section {
+    padding: 120px 0;
+    background: var(--rw-white);
+    position: relative;
+}
+
+/* Section Header */
+.sectionTag {
+    display: inline-block;
+    background: rgba(255, 107, 53, 0.1);
+    color: var(--rw-orange);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--rw-dark);
+    margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+    font-size: 1.1rem;
+    color: var(--rw-gray-medium);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Stats Container */
+.statsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.statCard {
+    background: var(--rw-gray-light);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    text-align: center;
+    min-width: 180px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.statCard:hover {
+    background: var(--rw-white);
+    border-color: var(--rw-orange);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.15);
+}
+
+.statIcon {
+    font-size: 1.5rem;
+    color: var(--rw-orange);
+    margin-bottom: 0.75rem;
+}
+
+.statValue {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--rw-dark);
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--rw-dark);
+    margin-bottom: 0.25rem;
+}
+
+.statDescription {
+    font-size: 0.85rem;
+    color: var(--rw-gray-medium);
+}
+
+/* Projects Section */
+.projectsTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--rw-dark);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--rw-gray);
+}
+
+.projectCard {
+    background: var(--rw-white);
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    border: 2px solid var(--rw-orange);
+    transition: all 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.15);
+}
+
+.projectHighlight {
+    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.2);
+}
+
+.projectHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.projectIcon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--rw-gradient-primary);
+    border-radius: 12px;
+    color: var(--rw-white);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.projectName {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--rw-dark);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.projectType {
+    font-size: 0.8rem;
+    color: var(--rw-orange);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.projectDescription {
+    font-size: 0.95rem;
+    color: var(--rw-gray-dark);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.projectServices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.serviceTag {
+    background: rgba(255, 107, 53, 0.1);
+    color: var(--rw-orange-dark);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Specialties */
+.specialtiesTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--rw-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.specialtyCard {
+    background: var(--rw-gray-light);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.specialtyCard:hover {
+    background: var(--rw-white);
+    border-color: var(--rw-gray);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.specialtyIcon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--rw-gradient-primary);
+    border-radius: 16px;
+    color: var(--rw-white);
+    font-size: 1.5rem;
+    margin: 0 auto 1.25rem;
+}
+
+.specialtyTitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--rw-dark);
+    margin-bottom: 0.75rem;
+}
+
+.specialtyDescription {
+    font-size: 0.9rem;
+    color: var(--rw-gray-medium);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.specialtyLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--rw-orange);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.specialtyLink:hover {
+    color: var(--rw-orange-dark);
+    gap: 10px;
+}
+
+/* CTA Box */
+.ctaBox {
+    background: var(--rw-gradient-dark);
+    border-radius: 24px;
+    padding: 3rem;
+    margin-top: 2rem;
+}
+
+.ctaTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--rw-white);
+    margin-bottom: 0.75rem;
+}
+
+.ctaText {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--rw-gradient-primary);
+    color: var(--rw-white);
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+}
+
+.ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.45);
+    color: var(--rw-white);
+}
+
+.ctaIcon {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .ctaIcon {
+    transform: translateX(4px);
+}
+
+/* Folium Map Section */
+.mapSection {
+    background: var(--rw-gray-light);
+    border-radius: 24px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+}
+
+.mapTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--rw-dark);
+    margin-bottom: 0.5rem;
+}
+
+.mapTitleIcon {
+    color: var(--rw-orange);
+    font-size: 1.3rem;
+}
+
+.mapSubtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--rw-gray-medium);
+    margin-bottom: 2rem;
+}
+
+/* Terminal Window Style (Linux Style) */
+.terminalWindow {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+        0 25px 50px -12px rgba(138, 43, 226, 0.25),
+        0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.terminalHeader {
+    background: linear-gradient(135deg, #6D28D9 0%, #5B21B6 50%, #4C1D95 100%);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.terminalButtons {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.terminalButton {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    display: inline-block;
+}
+
+.terminalButton:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.buttonClose {
+    background: linear-gradient(135deg, #ff5f57 0%, #ff3b30 100%);
+    box-shadow: 0 1px 3px rgba(255, 59, 48, 0.4);
+}
+
+.buttonMinimize {
+    background: linear-gradient(135deg, #febc2e 0%, #f5a623 100%);
+    box-shadow: 0 1px 3px rgba(245, 166, 35, 0.4);
+}
+
+.buttonMaximize {
+    background: linear-gradient(135deg, #28cd41 0%, #1db954 100%);
+    box-shadow: 0 1px 3px rgba(40, 205, 65, 0.4);
+}
+
+.terminalTitle {
+    flex: 1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.95);
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.terminalHeaderSpacer {
+    width: 54px;
+    flex-shrink: 0;
+}
+
+/* Terminal Body Animation */
+.terminalBody {
+    background: #1a1b26;
+    padding: 20px;
+    min-height: 120px;
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.terminalLine {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.terminalPrompt {
+    color: #7aa2f7;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.terminalCommand {
+    color: #c0caf5;
+    font-size: 0.9rem;
+}
+
+.terminalCursor {
+    color: #7aa2f7;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.terminalOutput {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.loadingText {
+    color: #9ece6a;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.loadingSpinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(158, 206, 106, 0.3);
+    border-top-color: #9ece6a;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Map visibility states */
+.mapContainer {
+    background: var(--rw-white);
+    overflow: hidden;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.mapHidden {
+    opacity: 0;
+    height: 0;
+    transform: translateY(20px);
+}
+
+.mapVisible {
+    opacity: 1;
+    height: auto;
+    transform: translateY(0);
+}
+
+.mapIframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .statsContainer {
+        gap: 1rem;
+    }
+
+    .ctaBox {
+        padding: 2rem;
+    }
+
+    .mapSection {
+        padding: 2rem;
+    }
+
+    .mapIframe {
+        height: 450px;
+    }
+
+    .terminalTitle {
+        font-size: 0.8rem;
+    }
+
+    .terminalButton {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .statCard {
+        padding: 1.5rem;
+        min-width: 140px;
+    }
+
+    .statValue {
+        font-size: 2rem;
+    }
+
+    .projectCard {
+        padding: 1.5rem;
+    }
+
+    .ctaBox {
+        padding: 1.5rem;
+    }
+
+    .ctaTitle {
+        font-size: 1.4rem;
+    }
+
+    .mapSection {
+        padding: 1.5rem;
+    }
+
+    .mapTitle {
+        font-size: 1.25rem;
+    }
+
+    .mapIframe {
+        height: 350px;
+    }
+
+    .terminalHeader {
+        padding: 10px 12px;
+    }
+
+    .terminalTitle {
+        font-size: 0.7rem;
+    }
+
+    .terminalButton {
+        width: 10px;
+        height: 10px;
+    }
+
+    .terminalButtons {
+        gap: 6px;
+    }
+
+    .terminalHeaderSpacer {
+        width: 42px;
+    }
+}

@@ -49,7 +49,7 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
+    git clone <[(https://github.com/fpereira22/Roadwise-Web)]>
     cd roadwise-web
     ```
 

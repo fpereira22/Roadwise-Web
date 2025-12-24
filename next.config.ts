@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,       // <--- Necesario para export estático si usas <Image>
   },
+  // ...cualquier otra config que ya tengas...
 };
 
 export default nextConfig;

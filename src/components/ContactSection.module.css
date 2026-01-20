@@ -208,6 +208,53 @@
     margin-bottom: 0;
 }
 
+/* Spinning animation for loader */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinning {
+    animation: spin 1s linear infinite;
+}
+
+/* Status Messages */
+.statusSuccess,
+.statusError {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.statusSuccess {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.statusError {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.statusSuccess svg,
+.statusError svg {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
 /* Responsive */
 @media (max-width: 991.98px) {
     .section {

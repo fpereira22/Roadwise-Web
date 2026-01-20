@@ -23,7 +23,7 @@ const Footer = () => {
     ];
 
     const socialLinks = [
-        { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/company/soc-servicios-generales-ltda', label: 'LinkedIn' },
+        { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/company/roadwise-cl', label: 'LinkedIn' },
         { icon: <FaXTwitter />, href: 'https://x.com/roadwise', label: 'X (Twitter)' },
         { icon: <FaInstagram />, href: 'https://instagram.com/roadwise', label: 'Instagram' },
     ];
@@ -113,7 +113,7 @@ const Footer = () => {
                                 <h4 className={styles.footerTitle}>Legal</h4>
                                 <ul className={styles.linksList}>
                                     <li>
-                                        <a href="#" className={styles.footerLink}>
+                                        <a href="/denuncias" className={styles.footerLink}>
                                             Centro de Denuncias
                                             <FaExternalLinkAlt className={styles.externalIcon} />
                                         </a>

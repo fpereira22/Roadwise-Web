@@ -12,6 +12,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@azure/communication-email": "^1.1.0",
+    "@azure/storage-blob": "^12.30.0",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.4.2",
     "@react-three/postprocessing": "^3.0.4",

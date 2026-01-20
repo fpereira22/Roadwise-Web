@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',          // <--- La clave para que Azure no de timeout
+  // output: 'export' removido para habilitar API routes
+  // Para deploy en Azure Static Web Apps, usa el híbrido con Azure Functions
   images: {
-    unoptimized: true,       // <--- Necesario para export estático si usas <Image>
+    unoptimized: true,       // Mantener para compatibilidad
   },
   // ...cualquier otra config que ya tengas...
 };

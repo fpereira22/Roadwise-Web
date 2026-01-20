@@ -26,7 +26,6 @@ const Header = () => {
     { href: '#inicio', label: 'Inicio' },
     { href: '#nosotros', label: 'Nosotros' },
     { href: '#experiencia', label: 'Experiencia' },
-    { href: '#contacto', label: 'Contacto' },
   ];
 
   return (
@@ -49,8 +48,8 @@ const Header = () => {
           />
         </Navbar.Brand>
 
-        <Navbar.Toggle 
-          aria-controls="main-navbar" 
+        <Navbar.Toggle
+          aria-controls="main-navbar"
           className={styles.toggler}
         >
           <span className={styles.togglerIcon}></span>
@@ -68,8 +67,8 @@ const Header = () => {
                 {link.label}
               </Nav.Link>
             ))}
-            <Nav.Link 
-              href="#contacto" 
+            <Nav.Link
+              href="#contacto"
               onClick={handleNavClick}
               className={styles.ctaButton}
             >

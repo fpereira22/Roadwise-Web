@@ -1,14 +1,58 @@
 'use client';
 
+import { useState } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
-import { FaEnvelope, FaUser, FaTag, FaComment, FaPaperPlane } from 'react-icons/fa';
+import { FaEnvelope, FaUser, FaTag, FaComment, FaPaperPlane, FaCheckCircle, FaExclamationCircle, FaSpinner } from 'react-icons/fa';
 import styles from './ContactSection.module.css';
 
 const ContactSection = () => {
-    const handleSubmit = (e: React.FormEvent) => {
+    const [isLoading, setIsLoading] = useState(false);
+    const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [statusMessage, setStatusMessage] = useState('');
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Backend logic will be implemented here
-        console.log('Form submitted');
+        setIsLoading(true);
+        setStatus('idle');
+        setStatusMessage('');
+
+        const formData = new FormData(e.currentTarget);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message'),
+        };
+
+        const form = e.currentTarget;
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                setStatus('success');
+                setStatusMessage('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
+                // Limpiar el formulario
+                form.reset();
+            } else {
+                setStatus('error');
+                setStatusMessage(result.error || 'Hubo un problema al enviar el mensaje. Inténtalo de nuevo.');
+            }
+        } catch (error) {
+            console.error('Error en el envío:', error);
+            setStatus('error');
+            setStatusMessage('Error de conexión. Por favor, verifica tu conexión a internet e inténtalo de nuevo.');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -116,10 +160,39 @@ const ContactSection = () => {
 
                                     {/* Submit Button */}
                                     <Col xs={12} className="text-center">
-                                        <button type="submit" className={styles.submitButton}>
-                                            <FaPaperPlane className={styles.submitIcon} />
-                                            Enviar Mensaje
+                                        <button
+                                            type="submit"
+                                            className={styles.submitButton}
+                                            disabled={isLoading}
+                                            style={{ opacity: isLoading ? 0.7 : 1 }}
+                                        >
+                                            {isLoading ? (
+                                                <>
+                                                    <FaSpinner className={`${styles.submitIcon} ${styles.spinning}`} />
+                                                    Enviando...
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <FaPaperPlane className={styles.submitIcon} />
+                                                    Enviar Mensaje
+                                                </>
+                                            )}
                                         </button>
+
+                                        {/* Status Messages */}
+                                        {status === 'success' && (
+                                            <div className={styles.statusSuccess}>
+                                                <FaCheckCircle />
+                                                <span>{statusMessage}</span>
+                                            </div>
+                                        )}
+                                        {status === 'error' && (
+                                            <div className={styles.statusError}>
+                                                <FaExclamationCircle />
+                                                <span>{statusMessage}</span>
+                                            </div>
+                                        )}
+
                                         <p className={styles.formNote}>
                                             Responderemos a tu consulta en un plazo máximo de 24 horas.
                                         </p>

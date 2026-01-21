@@ -811,3 +811,52 @@
         justify-content: center;
     }
 }
+
+/* Header Right */
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.adminLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.adminLink:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--rw-white);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.adminLink svg {
+    color: var(--rw-green-accent);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 575.98px) {
+    .headerRight {
+        gap: 0.5rem;
+    }
+
+    .headerBadge {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    .adminLink {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+}

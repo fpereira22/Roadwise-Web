@@ -581,8 +581,13 @@ export default function DenunciasPage() {
                                 className={styles.logo}
                             />
                         </a>
-                        <div className={styles.headerBadge}>
-                            <FaShieldAlt /> Canal Seguro
+                        <div className={styles.headerRight}>
+                            <div className={styles.headerBadge}>
+                                <FaShieldAlt /> Canal Seguro
+                            </div>
+                            <a href="/denuncias/admin" className={styles.adminLink}>
+                                <FaLock /> Ingreso
+                            </a>
                         </div>
                     </div>
                 </Container>

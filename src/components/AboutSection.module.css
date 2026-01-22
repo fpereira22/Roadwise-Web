@@ -293,6 +293,21 @@
         gap: 0.75rem;
     }
 
+    /* Centrar descripción en las tarjetas (Misión y Visión) */
+    .cardDescription {
+        text-align: center;
+    }
+
+    /* Puntos de la sección Visión (Tarjeta oscura) alineados a la izquierda */
+    .cardDark .point {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .cardDark .pointIcon {
+        margin: 0;
+    }
+
     .point {
         flex-direction: column;
         text-align: center;
@@ -304,6 +319,7 @@
 
     .techTags {
         gap: 0.5rem;
+        justify-content: flex-start;
     }
 
     .techTag {

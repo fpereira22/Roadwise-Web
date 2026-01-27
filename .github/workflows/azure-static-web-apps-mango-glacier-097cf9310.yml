@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Build And Deploy
@@ -36,11 +36,10 @@ jobs:
           api_location: "" 
           output_location: "" 
           app_build_command: "npm run build"
-          skip_api_build: true
           production_branch: "main"
         env:
           NEXT_TELEMETRY_DISABLED: 1
-          NODE_VERSION: 20
+          NODE_VERSION: 22
 
 
   close_pull_request_job:

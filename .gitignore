@@ -45,6 +45,7 @@ metadata.json
 debug_output.txt
 test-db.js
 debug-connection.js
+Inspeccion_vial_final.xml
 src/app/api/test-db/
 src/app/api/test-env/
 src/app/api/test-login/

@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // output: 'export' removido para habilitar API routes
+  output: 'standalone',
   // Para deploy en Azure Static Web Apps, usa el híbrido con Azure Functions
   images: {
     unoptimized: true,       // Mantener para compatibilidad

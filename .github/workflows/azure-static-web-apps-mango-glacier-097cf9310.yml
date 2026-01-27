@@ -36,6 +36,7 @@ jobs:
           api_location: "" 
           output_location: "" 
           app_build_command: "npm run build"
+          skip_api_build: true
           production_branch: "main"
         env:
           NEXT_TELEMETRY_DISABLED: 1

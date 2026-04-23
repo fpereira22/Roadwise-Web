@@ -105,7 +105,7 @@ export default function PresentationPage() {
                                 </h1>
                                 <p className={styles.department}>Departamento de Innovación y Desarrollo - Roadwise LTDA</p>
                                 <div className={styles.authorsBadge}>
-                                    Martín Cortés – Nicolás Salvatici
+                                    Martín Cortés O.
                                 </div>
                             </div>
                             <div className={styles.rightImage}>
